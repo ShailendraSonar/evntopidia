@@ -1,5 +1,7 @@
 const { user } = require("../models/User");
-const bcrypt=require('bcrypt')
+const bcrypt=require('bcrypt');
+const jwt=require('jsonwebtoken')
+require('dotenv').config();
 
 const register = async (req, res) => {
   try {
@@ -29,12 +31,26 @@ const register = async (req, res) => {
     }
     const result=await user.create({
       firstname,lastname,email,password:hashedpass,roles
-  })
-
-  res.status(200).json({
-      message:"Done",
-      result:result
-  })
+    })
+    if(result){
+      const payload={
+        email:result.email,
+        role:result.role,
+        id:result.id
+      }
+      let token=jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:"2h"});
+      res.header('Authorization', `Bearer ${token}`)
+      .status(200).json({
+          message:"Done",
+          result:result,
+          token:token
+      })
+    }else{
+      return res.status(403).json({
+          sucess:false,
+          message:"error in token generation",
+      })
+  }
 
   } catch (err) {
     console.error(err);
