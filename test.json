@@ -1,0 +1,22 @@
+{ 
+    "MemberEmail":"test@gmail.com", 
+    "MemberPassword":"qwerty@123", 
+    "MemberRole":"Admin", 
+    "companyName":"xyz", 
+    "industryType":"tech", 
+    "personName":"satyendra", 
+    "contactNumber":777777777, 
+    "position":"backend", 
+    "QuestionaireResponse":{
+        "question1":"what is your name",
+        "ans1":"xyz mishra",
+        "question2":"industryType",
+        "ans2":"tech",
+        "question3":"your hobbies",
+        "ans3":["coading","reading","eating","xyz"],
+        "question4":"name some places ?",
+        "ans4":["bsp","hyd","pune"],
+        "question5":"xyz",
+        "ans5":"xyz"
+    }
+}
