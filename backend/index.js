@@ -3,15 +3,18 @@ const express = require('express');
 const {memberTable,responseTable } = require('./models/User');
 const router = require('./routes/route');
 const app = express();
+const cros =require('cors')
 
 app.use(express.json());
 
-memberTable.sync({force:true});
-responseTable.sync({force:true});
+memberTable.sync();
+responseTable.sync();
 
 app.get('/', (req, res) => {
     res.send("<h1>hello everyone<h1/>")
 })
+
+app.use(cros());
 
 app.use(router)
 
