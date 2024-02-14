@@ -20,3 +20,47 @@
         "ans5":"xyz"
     }
 }
+{ 
+    "MemberEmail":"sk@gmail.com", 
+    "MemberPassword":"qwerty", 
+    "MemberRole":"Sponser", 
+    "companyName":"Microsoft", 
+    "industryType":"tech", 
+    "personName":"kush", 
+    "contactNumber":6268185755, 
+    "position":"frontend", 
+    "QuestionaireResponse":{
+        "question1":"what is your name",
+        "ans1":"kush tiwari",
+        "question2":"industryType",
+        "ans2":"finance",
+        "question3":"your hobbies",
+        "ans3":["neha","neha","neha","neha"],
+        "question4":"name some places ?",
+        "ans4":["cg","hyd","neha"],
+        "question5":"zyx",
+        "ans5":"abc"
+    }
+}
+{ 
+    "MemberEmail":"ssonar@gmail.com", 
+    "MemberPassword":"qwerty", 
+    "MemberRole":"Speaker", 
+    "companyName":"meta", 
+    "industryType":"tech", 
+    "personName":"somo", 
+    "contactNumber":87708754, 
+    "position":"fullstack", 
+    "QuestionaireResponse":{
+        "question1":"what is your name",
+        "ans1":"somo sonar",
+        "question2":"industryType",
+        "ans2":"tech",
+        "question3":"your hobbies",
+        "ans3":["nothing","nothing","nothing","nothing"],
+        "question4":"name some places ?",
+        "ans4":["cg","hyd","nothing"],
+        "question5":"zyx",
+        "ans5":"abc"
+    }
+}

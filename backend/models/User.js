@@ -53,7 +53,7 @@ const responseTable=sequelize.define("Response",{
     unique:true
   },
   contactNumber:{
-    type:DataTypes.INTEGER,
+    type:DataTypes.BIGINT,
     allowNull:false
   },
   position:{

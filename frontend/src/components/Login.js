@@ -26,9 +26,9 @@ export default function Login(){
     const authenticateUser = async() =>{
         try {
             let APIuRL = 'http://localhost:3001/login';
-            console.log(loginState.email,loginState.password);
             const response = await axios.post(APIuRL, { MemberEmail:loginState.email, MemberPassword:loginState.password });
-            console.log(response.data);
+            localStorage.setItem("token",response.data.token);
+            localStorage.setItem("role",response.data.user.MemberRole);
             navigate('/dashboard');
           } catch (error) {
             console.error(error.response.data);
