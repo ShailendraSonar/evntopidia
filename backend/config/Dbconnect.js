@@ -1,6 +1,6 @@
 const Sequelize=require('sequelize');
 
-const sequelize=new Sequelize('freelancing','root','qwerty',{
+const sequelize=new Sequelize('freelancing','root','Somoo12@sonar',{
         dialect:'mysql'
     });
 

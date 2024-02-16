@@ -1,13 +1,19 @@
 import {Link} from 'react-router-dom';
+import 
+ {BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify}
+ from 'react-icons/bs'
 
 export default function Header({
+    OpenSidebar,
     heading,
     paragraph,
     linkName,
     linkUrl="#"
 }){
     return(
-        <div className="mb-10">
+       
+        <>
+         <div className="mb-10">
             <div className="flex justify-center">
                 <img 
                     alt=""
@@ -24,5 +30,19 @@ export default function Header({
             </Link>
             </p>
         </div>
+        <header className='header'>
+        <div className='menu-icon'>
+            <BsJustify className='icon' onClick={OpenSidebar}/>
+        </div>
+        <div className='header-left'>
+            <BsSearch  className='icon'/>
+        </div>
+        <div className='header-right'>
+            <BsFillBellFill className='icon'/>
+            <BsFillEnvelopeFill className='icon'/>
+            <BsPersonCircle className='icon'/>
+        </div>
+    </header>
+        </>
     )
 }
